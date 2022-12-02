@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+li, a{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: aqua;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+  background-color: grey;
+}
+
+header h1{
+  cursor: pointer;
+  background-color: aqua;
+  padding-left: 100px;
+  color: grey;
+}
+
+nav{
+  list-style: none;
+}
+
+nav li{
+  display: inline-block;
+  padding: 0px 5px;
+  background-color: transparent;
+}
+
+nav li a{
+  transition: all 0.3 ease 0s;
+}
+
+nav li a:hover{
+  color:#0088a9
+}
+
+.hero-banner{
+  background-image: url(../images/02-hero-bg.jpg);
+  background-size: cover;
+  opacity: 0.6;
+  height: 300px;
+}
+
+.hero-color{
+  background-color: rgb(22, 63, 63);
+  position: relative;
+}
+
+.hero-color h2{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: aqua;
+  color: grey;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+#about{
+  color: grey;
+  border-right: 6px solid grey;
+  height: 300px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
