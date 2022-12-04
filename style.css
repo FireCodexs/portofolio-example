@@ -9,6 +9,22 @@ body {
   line-height: 1.5;
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* NAV BAR CSS */
+
 li, a{
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -49,8 +65,10 @@ nav li a:hover{
   color:#0088a9
 }
 
+/* MAIN BANNER CSS */
+
 .hero-banner{
-  background-image: url(../images/02-hero-bg.jpg);
+  background-image: url(./images/02-hero-bg.jpg);
   background-size: cover;
   opacity: 0.6;
   height: 300px;
@@ -71,27 +89,133 @@ nav li a:hover{
   padding-right: 20px;
 }
 
-.container {
+/* MAIN PROTOFOLIO SECTION CSS */
+
+.grid-container {
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-rows: minmax(200px, auto);
+  grid-row-gap: 100px;
+  padding: 50px 100px;
+  grid-template-areas:
+  "aboutLeft aboutRight"
+  "workLeft workRight"
+  "contactLeft contactRight";
 }
 
 #about{
+  grid-area: aboutLeft;
+  padding-right: 20px;
   color: grey;
-  border-right: 6px solid grey;
-  height: 300px;
+  border-right: 5px solid grey;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  text-align: right;
 }
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+#work{
+  grid-area: workLeft;
+  padding-right: 20px;
+  color: grey;
+  border-right: 5px solid grey;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  text-align: right;
 }
 
-p {
-  margin: 0;
+#contact{ 
+  grid-area: contactLeft;
+  padding-right: 20px;
+  color: grey;
+  border-right: 5px solid grey;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  text-align: right;
+}
+
+.about-me-text{
+  grid-area: aboutRight;
+  text-align: justify;
+  margin: auto;
+  padding: 20px;
+}
+
+.work-section{
+  grid-area: workRight;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 600px 200px 200px;
+  margin: 0px 25px;
+  grid-gap: 10px;
+  grid-template-areas:
+  "areaOne areaOne"
+  "areaTwo areaThree"
+  "areaFour areaFive"
+}
+
+.areaOne{
+  grid-area: areaOne;
+  background-image: url(./images/02-portfolio-4.jpg);
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+.areaTwo{
+  grid-area: areaTwo;
+  background-image: url(./images/02-portfolio-1.jpg);
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+.areaThree{
+  grid-area: areaThree;
+  background-image: url(./images/02-portfolio-2.jpg);
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+.areaFour{
+  grid-area: areaFour;
+  background-image: url(./images/02-portfolio-3.jpg);
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+.areaFive{
+  grid-area: areaFive;
+  background-image: url(./images/02-run-buddy.jpg);
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+  /* CONTACT ME RIGHT SIDE CSS */
+.after-contact{
+  grid-area: contactRight;
+}
+
+  .contact-links{
+  list-style: none;
+  text-decoration: none;
+  padding: 60px;
+}
+
+.contact-links li{
+  display: inline-block;
+  padding: 0px 5px;
+}
+
+.contact-links li a{
+  position: relative;
+  text-decoration: none;
+  border-bottom: 3px solid grey;
+  padding-bottom: 3px;
+  color: grey;
+  transition: all 0.3 ease 0s;
+}
+
+.contact-links li a:hover{
+  color:#0088a9
 }
